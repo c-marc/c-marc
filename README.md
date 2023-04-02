@@ -36,7 +36,7 @@ const currentActivity = (
 };
 
 // Config Me
-const motivation = Math.random(); //this one feels like an interview trap, let's not be too specific 🤖
+const motivation = Math.random(); // let's not be too specific 🤖
 const currentInterests = ["Remix", "vitest"]; //👈 👀 TL;DR
 
 // Typed Me
@@ -67,7 +67,8 @@ export const askMeAnything = async (
 export default me;
 
 // I also could be an instance of a class, with a method to ask me anything...
-// But let's agree it's just a funny personal readme, so I modestly made myself a global entity in that very finite space ;)
+// But let's agree it's just a funny personal readme...
+// So I modestly made myself a global entity in that very finite space ;)
 ```
 
 ```typescript
@@ -81,7 +82,7 @@ askMeAnything()
   .then(() => console.info("👋"));
 ```
 
-## More Readable Readme <a id="human-readable></a>
+## More Readable Readme <a id="human-readable"></a>
 
 Hi! I'm Marc,
 
@@ -113,16 +114,10 @@ What I'm interested in learning right now:
 
 I've also got a statistical background and a solid experience with `R`. Even though, I've recently been spending more time on web development, that might be useful...
 
-## Contact Me <a id="contacf-me"></a>
+## Contact Me <a id="contact-me"></a>
 
-Feel free to:
+Feel free to contact me the way you want:
 
+- Use the following form: [Get in Touch](https://docs.google.com/forms/d/e/1FAIpQLSfmyFu69z6uW5NCthyDgYdp9gBESK-GErWL6AW589uApaweAg/viewform?usp=sf_link)
 - Post an issue
 - Find my e-mail around here if you're a `git` ninja
-- Use the following form:
-
-```javascript
-//TODO: try to insert form and test whether safe-rendering from GH is throwing it away...
-```
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmyFu69z6uW5NCthyDgYdp9gBESK-GErWL6AW589uApaweAg/viewform?embedded=true" width="640" height="812" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
