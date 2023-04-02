@@ -1,8 +1,8 @@
-## Hello World
+## Hello World 👋
 
 Jump to [More Readable Readme](#human-readable) or to [Contact Me](#contact-me)
 
-## Me as a module
+## Me as a module 🤖
 
 TL;DR: just [scroll down](#human-readable).
 
@@ -36,7 +36,7 @@ const currentActivity = (
 };
 
 // Config Me
-const motivation = Math.random(); // let's not be too specific 🤖
+const motivation = Math.random(); // let's not be too specific
 const currentInterests = ["Remix", "vitest"]; //👈 👀 TL;DR
 
 // Typed Me
@@ -82,9 +82,9 @@ askMeAnything()
   .then(() => console.info("👋"));
 ```
 
-## More Readable Readme <a id="human-readable"></a>
+## More Readable Readme 🙂 <a id="human-readable"></a>
 
-Hi! I'm Marc,
+Hi 👋, I'm Marc,
 
 Here I'm a software engineer, learning fullstack development, web & mobile.
 
@@ -92,7 +92,7 @@ Here I'm a software engineer, learning fullstack development, web & mobile.
 // TODO: landing page and/or portfolio
 ```
 
-What I'm into:
+⚡ What I'm into:
 
 - Languages: HTML5, CSS and javascript/typescript (I learnt Python in another life, but right now I'm into JS/TS for backend too)
 - Frontend libs: React, React Router
@@ -104,7 +104,7 @@ What I'm into:
 - Mobile: React Native
 - UX/UI: some knowledge of concepts and Figma
 
-What I'm interested in learning right now:
+🌱 What I'm interested in learning right now:
 
 - sharpen my skills with the already mentionned tech;
 - get a better workflow and get better at choosing and leveraging the right tools (frameworks, 3rd-party libs or services... ); and at focusing my learning and expertise on these...
@@ -112,9 +112,9 @@ What I'm interested in learning right now:
 - maybe a UI library; maybe Storybook;
 - maybe a headless-CMS
 
-I've also got a statistical background and a solid experience with `R`. Even though, I've recently been spending more time on web development, that might be useful...
+📚 I've also got a statistical background and a solid experience with `R`. Even though, I've recently been spending more time on web development, that might be useful...
 
-## Contact Me <a id="contact-me"></a>
+## Contact Me 💬 <a id="contact-me"></a>
 
 Feel free to contact me the way you want:
 
