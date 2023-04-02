@@ -92,7 +92,7 @@ Here I'm a software engineer, learning fullstack development, web & mobile.
 // TODO: landing page and/or portfolio
 ```
 
-### ⚡ What I'm into
+### What I'm into ⚡
 
 - Languages: HTML5, CSS and javascript/typescript (I learnt Python in another life, but right now I'm into JS/TS for backend too)
 - Frontend libs: React, React Router
@@ -104,7 +104,7 @@ Here I'm a software engineer, learning fullstack development, web & mobile.
 - Mobile: React Native
 - UX/UI: some knowledge of concepts and Figma
 
-### 🌱 What I'm interested in learning right now
+### What I'm interested in learning right now 🌱
 
 - sharpen my skills with the already mentionned tech;
 - get a better workflow and get better at choosing and leveraging the right tools (frameworks, 3rd-party libs or services... ); and at focusing my learning and expertise on these...
@@ -112,11 +112,11 @@ Here I'm a software engineer, learning fullstack development, web & mobile.
 - maybe a UI library; maybe Storybook;
 - maybe a headless-CMS
 
-### 📚 Worth mentioning
+### Worth mentioning 🔧
 
 I've also got a statistical background and a solid experience with `R`. Even though I've recently been spending more time on web development, you may be here because of that... Want to talk about causality, misconceptions about _p-values_, or the `Tidyverse`? Why not...
 
-## Contact Me 📧 <a id="contact-me"></a>
+## Contact Me 💬 <a id="contact-me"></a>
 
 Feel free to contact me the way you want:
 
