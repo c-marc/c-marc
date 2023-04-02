@@ -1,6 +1,6 @@
 import me, { askMeAnything } from "./profile";
 
-askMeAnything()
+askMeAnything("6*7")
   .then((answer) => {
     console.info(me.firstName + " says: " + answer);
   })
