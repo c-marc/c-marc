@@ -21,7 +21,7 @@ interface Profile {
 // Fully typed function
 const currentActivity = (
   motivation: number,
-  what: string | string[] = "42"
+  what: string | string[] = "[un]important stuffs"
 ): Activity => {
   return Math.random() > motivation
     ? { status: "procrastinating" }
