@@ -112,7 +112,7 @@ Here I'm a software engineer, learning fullstack development, web & mobile.
 - maybe a UI library; maybe Storybook;
 - maybe a headless-CMS
 
-📚 I've also got a statistical background and a solid experience with `R`. Even though, I've recently been spending more time on web development, that might be useful...
+📚 I've also got a statistical background and a solid experience with `R`. Even though I've recently been spending more time on web development, that might be useful...
 
 ## Contact Me 💬 <a id="contact-me"></a>
 
