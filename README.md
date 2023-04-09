@@ -46,8 +46,11 @@ const me: Profile = {
 };
 
 // Backend Me (IA will never beat this one)
-const thinking = (question: string): Promise<string> => {
-  const answer = question ? "42" : "This deserves a 'void' return ;)";
+const thinking = async (question: string): Promise<string> => {
+  if (!question || typeof question !== "string") {
+    throw new Error("500: brain crash");
+  }
+  const answer = "42";
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(answer);
@@ -57,36 +60,45 @@ const thinking = (question: string): Promise<string> => {
 
 // Frontend interaction with Me
 export const askMeAnything = async (
-  question = "What's the meaning of life?"
-): Promise<string> => {
-  const answer = await thinking(question);
-  return answer;
+  question: string = "What's the meaning of life?"
+): Promise<string | void> => {
+  try {
+    if(!question || typeof question !=="string"){
+      throw new Error("400: "Haha!")
+    }
+    const answer = await thinking(question);
+    return answer;
+  } catch (error) {
+    let message;
+    if (error instanceof Error) message = error.message;
+    else message = "404: It seems you just managed to 404 me...";
+    console.log(message);
+  }
 };
 
 // Frontend Me
 export default me;
-
-// I also could be an instance of a class, with a method to ask me anything...
-// But let's agree it's just a funny personal readme...
-// So I modestly made myself a global entity in that very finite space ;)
 ```
+
+Hello world:
 
 ```typescript
 // main.ts
 import me, { askMeAnything } from "./profile";
 
-askMeAnything("6*7 ?")
+askMeAnything("6*7")
   .then((answer) => {
-    console.info(me.firstName + " says: " + answer);
+    console.info(`${me.firstName} says: ${answer}`);
   })
-  .then(() => console.info("👋"));
+  .catch(() => console.info("Woops"))
+  .finally(() => console.info("👋"));
 ```
 
 ## More Readable Readme 🙂 <a id="human-readable"></a>
 
 Hi 👋, I'm Marc,
 
-Here I'm a software engineer, learning fullstack development, web & mobile.
+Here I'm still studying, now learning fullstack development, web & mobile.
 
 ```javascript
 // TODO: landing page and/or portfolio
@@ -96,25 +108,26 @@ Here I'm a software engineer, learning fullstack development, web & mobile.
 
 - Languages: HTML5, CSS and javascript/typescript (I learnt Python in another life, but right now I'm into JS/TS for backend too)
 - Frontend libs: React, React Router
-- Fullstack frameworks: I'm into Remix. I like their approach.
-- Pretty stuffs: I'm a little bit versatile with this subject: Tailwind-CSS, plain CSS, classless or minimalistic CSS approches...
-- DB: MongoDB, SQlite, Prisma (ORM), BaaS
+- Fullstack frameworks: I'm into Remix right now
+- Pretty stuffs: I'm a little bit versatile with this subject: plain CSS, TailwindCSS, classless or minimalistic CSS approches...
+- ODM/ORM: mongoose, Prisma, BaaS
 - Backend: (Remix), Express, BaaS
-- DevOps: I'm fine with simple deployment, but this is not something I'm fluent with in a production environment where you cannot mess with migrations, security...
+- DevOps: I'm fine with simple deployment, CI/CD concepts, but this is not something I'm fluent with in a production environment where you cannot mess with migrations, security...
 - Mobile: React Native
-- UX/UI: some knowledge of concepts and Figma
+- UX/UI: some knowledge of concepts and some knowledge of Figma
 
 ### What I'm interested in learning right now 🌱
 
 - sharpen my skills with the already mentionned tech;
 - get a better workflow and get better at choosing and leveraging the right tools (frameworks, 3rd-party libs or services... ); and at focusing my learning and expertise on these...
 - get better at testing: Vitest, cypress;
-- maybe a UI library; maybe Storybook;
+- maybe a UI library
+- maybe Storybook;
 - maybe a headless-CMS
 
 ### Worth mentioning 🔧
 
-I've also got a statistical background and a solid experience with `R`. Even though I've recently been spending more time on web development, you may be here because of that... Want to talk about causality, misconceptions about _p-values_, or the `Tidyverse`? Why not...
+I've also got a statistical background and a solid experience with `R`. Even though I've recently been spending more time on web development, you may be here because of that... Want to talk about causality, misconceptions about _p-values_ or confidence intervals, or the `Tidyverse`?
 
 ## Contact Me 💬 <a id="contact-me"></a>
 

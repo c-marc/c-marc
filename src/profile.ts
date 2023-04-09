@@ -39,8 +39,11 @@ const me: Profile = {
 };
 
 // Backend Me (IA will never beat this one)
-const thinking = (question: string): Promise<string> => {
-  const answer = question ? "42" : "This deserves a 'void' return ;)";
+const thinking = async (question: string): Promise<string> => {
+  if (!question || typeof question !== "string") {
+    throw new Error("500: brain crash");
+  }
+  const answer = "42";
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(answer);
@@ -50,14 +53,21 @@ const thinking = (question: string): Promise<string> => {
 
 // Frontend interaction with Me
 export const askMeAnything = async (
-  question = "What's the meaning of life?"
-): Promise<string> => {
-  const answer = await thinking(question);
-  return answer;
+  question: string = "What's the meaning of life?"
+): Promise<string | void> => {
+  try {
+    if (!question || typeof question !== "string") {
+      throw new Error("400: Haha!");
+    }
+    const answer = await thinking(question);
+    return answer;
+  } catch (error) {
+    let message;
+    if (error instanceof Error) message = error.message;
+    else message = "404: It seems you just managed to 404 me...";
+    console.log(message);
+  }
 };
 
 // Frontend Me
 export default me;
-
-// I also could be an instance of a class, with a method to ask me anything...
-// But let's agree it's just a funny personal readme, so I modestly made myself a global entity in that very finite space ;)
