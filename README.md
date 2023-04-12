@@ -29,6 +29,7 @@ interface Profile {
 }
 
 // Fully typed function
+/** Fight with heterogenous types of return */
 const currentActivity = (
   motivation: number,
   what: string | string[] = "[un]important stuffs"
@@ -49,6 +50,7 @@ const me: Profile = {
 };
 
 // Backend Me (IA will never beat this one)
+/** Mock a server route */
 const thinking = async (question: string): Promise<string> => {
   try {
     if (!question || typeof question !== "string") {
@@ -61,13 +63,14 @@ const thinking = async (question: string): Promise<string> => {
       }, 3000);
     });
   } catch (error: unknown) {
-    // this block might need improvement
+    // this block might need improvement (typing error is tricky)
     if (error instanceof Error && error.message) throw error; //rethrow
     else throw new Error("500: Brain crash :/");
   }
 };
 
 // Frontend interaction with Me
+/** Mock a fetch */
 export const askMeAnything = async (
   question: string = "What's the meaning of life?"
 ): Promise<string | void> => {
@@ -78,6 +81,7 @@ export const askMeAnything = async (
     const answer = await thinking(question);
     return answer;
   } catch (error: unknown) {
+    // this block might need improvement (typing error is tricky)
     if (error instanceof Error && error.message) {
       console.log(error.message);
     } else {
