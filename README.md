@@ -2,9 +2,14 @@
 
 Jump to [More Readable Readme](#human-readable) or to [Contact Me](#contact-me)
 
+TL;DR: just [scroll down](#human-readable).
+
 ## Me as an experimental module 🤖
 
-TL;DR: just [scroll down](#human-readable).
+<details>
+<summary>
+  I'm doing my best to write **clean and safe code**.
+</summary>
 
 ```typescript
 // profile.ts
@@ -107,6 +112,8 @@ import me, { askMeAnything } from "./profile";
 })();
 ```
 
+ </details>
+ 
 ## More Readable Readme 🙂 <a id="human-readable"></a>
 
 Hi 👋, I'm Marc,
