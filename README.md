@@ -1,14 +1,12 @@
 ## Hello World 👋
 
-Jump to [More Readable Readme](#human-readable) or to [Contact Me](#contact-me)
-
-TL;DR: just [scroll down](#human-readable).
+TL;DR: Jump to [More Readable Readme](#human-readable) or to [Contact Me](#contact-me)
 
 ## Me as an experimental module 🤖
 
 <details>
 <summary>
-  I'm doing my best to write **clean and safe code**.
+  I'm doing my best to write <strong>clean and safe code</strong>.
 </summary>
 
 ```typescript
