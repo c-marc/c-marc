@@ -1,8 +1,14 @@
 import me, { askMeAnything } from "./profile";
 
-askMeAnything("6*7")
-  .then((answer) => {
+(async () => {
+  try {
+    const answer = await askMeAnything("6*7");
     console.info(`${me.firstName} says: ${answer}`);
-  })
-  .catch(() => console.info("Woops"))
-  .finally(() => console.info("👋"));
+  } catch (error: unknown) {
+    console.info("Woops");
+    if (error instanceof Error && error.message) {
+      console.log(error.message);
+    }
+  }
+  console.info("👋");
+})();
