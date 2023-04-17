@@ -53,7 +53,7 @@ const me: Profile = {
 /** Mock a server route */
 const thinking = async (question: string): Promise<string> => {
   try {
-    if (!question || typeof question !== "string") {
+    if (!question || typeof question !== "string" || question === "42?") {
       throw new Error("422: Haha!"); //unprocessable content
     }
     const answer = "42";
@@ -76,17 +76,14 @@ export const askMeAnything = async (
 ): Promise<string | void> => {
   try {
     if (!question || typeof question !== "string") {
-      throw new Error("Hmm... It doesn't look like a question...");
+      return "Hmm... It doesn't look like a question...";
     }
     const answer = await thinking(question);
     return answer;
   } catch (error: unknown) {
     // this block might need improvement (typing error is tricky)
-    if (error instanceof Error && error.message) {
-      console.log(error.message);
-    } else {
-      console.log("You found a bug! Please tell me!");
-    }
+    if (error instanceof Error && error.message) throw error; //rethrow
+    else throw new Error("You found a bug! Please tell me!");
   }
 };
 
