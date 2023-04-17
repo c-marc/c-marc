@@ -6,7 +6,7 @@ TL;DR: Jump to [More Readable Readme](#human-readable) or to [Contact Me](#conta
 
 <details>
 <summary>
-  I'm doing my best to write <strong>clean and safe code</strong>.
+  I'm trying to write <strong>clean and safe code</strong>.
 </summary>
 
 ```typescript
@@ -41,11 +41,11 @@ const currentActivity = (
 
 // Config Me
 const motivation = Math.random(); // let's not be too specific
-const currentInterests = ["Remix", "vitest"]; //👈 👀 TL;DR
+const currentInterests = ["Remix", "vitest"];
 
 // Typed Me
 const me: Profile = {
-  firstName: "Marc", //👈 👾 TL;DR
+  firstName: "Marc", //👈 👾
   activity: currentActivity(motivation, currentInterests),
 };
 
@@ -101,6 +101,7 @@ Hello world:
 import me, { askMeAnything } from "./profile";
 
 (async () => {
+  console.info("Hi 👋");
   try {
     const answer = await askMeAnything("6*7");
     console.info(`${me.firstName} says: ${answer}`);
@@ -110,7 +111,7 @@ import me, { askMeAnything } from "./profile";
       console.log(error.message);
     }
   }
-  console.info("👋");
+  console.info("See you later, Alligator 🐊");
 })();
 ```
 

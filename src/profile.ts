@@ -31,11 +31,11 @@ const currentActivity = (
 
 // Config Me
 const motivation = Math.random(); //let's not be too specific 🤖
-const currentInterests = ["Remix", "vitest"]; //👈 👀 TL;DR
+const currentInterests = ["Remix", "vitest"];
 
 // Typed Me
 const me: Profile = {
-  firstName: "Marc", //👈 👾 TL;DR
+  firstName: "Marc", //👈 👾
   activity: currentActivity(motivation, currentInterests),
 };
 

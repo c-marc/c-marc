@@ -1,6 +1,7 @@
 import me, { askMeAnything } from "./profile";
 
 (async () => {
+  console.info("Hi 👋");
   try {
     const answer = await askMeAnything("6*7");
     console.info(`${me.firstName} says: ${answer}`);
@@ -10,5 +11,5 @@ import me, { askMeAnything } from "./profile";
       console.log(error.message);
     }
   }
-  console.info("👋");
+  console.info("See you later, Alligator 🐊");
 })();
