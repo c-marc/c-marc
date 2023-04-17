@@ -65,7 +65,7 @@ const thinking = async (question: string): Promise<string> => {
   } catch (error: unknown) {
     // this block might need improvement (typing error is tricky)
     if (error instanceof Error && error.message) throw error; //rethrow
-    else throw new Error("500: Brain crash :/");
+    else throw new Error("500: Brain crash :/", { cause: error });
   }
 };
 
@@ -83,7 +83,7 @@ export const askMeAnything = async (
   } catch (error: unknown) {
     // this block might need improvement (typing error is tricky)
     if (error instanceof Error && error.message) throw error; //rethrow
-    else throw new Error("You found a bug! Please tell me!");
+    else throw new Error("You found a bug! Please tell me!", { cause: error });
   }
 };
 
@@ -103,8 +103,7 @@ import me, { askMeAnything } from "./profile";
     const answer = await askMeAnything("6*7");
     console.info(`${me.firstName} says: ${answer}`);
   } catch (error: unknown) {
-    console.info("Woops");
-    if (error instanceof Error && error.message) {
+    if (error instanceof Error) {
       console.log(error.message);
     }
   }

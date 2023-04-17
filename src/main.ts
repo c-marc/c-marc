@@ -6,8 +6,7 @@ import me, { askMeAnything } from "./profile";
     const answer = await askMeAnything("42?");
     console.info(`${me.firstName} says: ${answer}`);
   } catch (error: unknown) {
-    console.info("Woops");
-    if (error instanceof Error && error.message) {
+    if (error instanceof Error) {
       console.error(error.message);
     }
   }
